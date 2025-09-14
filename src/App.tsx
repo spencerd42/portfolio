@@ -151,7 +151,7 @@ const timelineEvents: TimelineEvent[] = [
     icon: <Network size={16} className="text-white" /> 
   },
   { date: 'January 2025 - May 2025', title: 'Intellect Logic Systems', subtitle: "AI/ML Engineer", description: 'In Spring of 2025, I worked part-time for ILS on a RAG pipeline. I was focused on adding support for ingesting a new type of document, including cleaning, chunking, and embedding the data. In addition, I assisted with transitioning are code base from being hosted on AWS to our own private server.', icon: <BrainCircuit size={16} className="text-white" /> },
-  { date: 'May 2025 - August 2025', title: 'Harris Preston & Partners', subtitle: "AI/ML Engineer", description: 'At Harris Preston and Partners, I dove into the world of private equity.', icon: <DollarSign size={16} className="text-white" /> },
+  { date: 'May 2025 - August 2025', title: 'Harris Preston & Partners', subtitle: "AI/ML Engineer", description: 'At Harris Preston and Partners, I dove into the world of private equity. I consolidated and analyzed more than 75 deals to provide data-driven investment recommendations. In addition, I automated the drafting of investment notices and built a framework for comparing documents via semantic search. Finally, I was able to observe first-hand private equity deal flow, due diligence, and value creation.', icon: <DollarSign size={16} className="text-white" /> },
 ];
 
 // --- TIMELINE ITEM COMPONENT ---
