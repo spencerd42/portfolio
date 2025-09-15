@@ -2,34 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Footer from './components/Footer';
 
-// --- Page Components ---
-// We've broken out each section into its own component to act as a "page".
-
-// const HomePage = () => {
-//   const heroStyle = {
-//     backgroundImage: `url('https://images.unsplash.com/photo-1550063873-ab792950096b?q=80&w=2070&auto=format&fit=crop')`,
-//   };
-
-//   return (
-//     <section className="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style={heroStyle}>
-//       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
-//       <div className="relative z-10 px-4">
-//         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-//           Hi, I'm Spencer.
-//         </h1>
-//         <p className="text-lg md:text-xl text-neutral-300">
-//           Software Engineer | AI/ML & FinTech
-//         </p>
-//       </div>
-//     </section>
-//   );
-// };
-
 import { ChevronDown } from 'lucide-react';
 
 const HomePage = () => {
   const heroStyle = {
-    // Using a slightly different, high-quality image for variety
     backgroundImage: `url('/hero-bg.jpeg')`,
   };
 
@@ -38,7 +14,7 @@ const HomePage = () => {
     <>
       {/* --- Hero Section --- */}
       <section 
-        className="relative h-screen flex items-center justify-start text-left bg-cover bg-center px-6 md:px-12 lg:px-24"
+        className="relative flex-grow flex items-center justify-start text-left bg-cover bg-center px-6 md:px-12 lg:px-24"
         style={heroStyle}
       >
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
@@ -59,47 +35,20 @@ const HomePage = () => {
           />
         </div>
       </section>
-
-      {/* --- About Me Section --- */}
-      <section id="about" className="bg-neutral-900 text-white py-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            About Me
-          </h2>
-          <div className="flex flex-col md:flex-row items-center gap-12">
-
-            {/* About Text */}
-            <div className="text-lg text-neutral-300 space-y-4 text-center md:text-left">
-              <p>
-                I'm a passionate software engineer with a strong focus on building intelligent systems 
-                at the intersection of artificial intelligence and financial technology. My journey into tech 
-                is built on a unique foundation of resilience and teamwork, skills I first honed while working 
-                as a commercial fisherman in the challenging conditions of Alaska.
-              </p>
-              <p>
-                Today, I apply that same dedication to solving complex problems with code. Whether it's 
-                developing robust AI/ML pipelines or engineering solutions for trading systems, I thrive on 
-                creating software that is both efficient and impactful.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
     </>
   );
 };
 
-const ProjectsPage = () => {
-  return (
-    <section id="projects" className="my-16 text-neutral-200">
-       <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-       <div className="text-center p-8 bg-neutral-800 rounded-lg border border-neutral-700">
-        <p>A showcase of my projects, including the live trading bot graph, will be here.</p>
-      </div>
-    </section>
-  );
-};
+// const ProjectsPage = () => {
+//   return (
+//     <section id="projects" className="my-8 text-neutral-200">
+//        <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
+//        <div className="text-center p-8 bg-neutral-800 rounded-lg border border-neutral-700">
+//         <p>A showcase of my projects, including the live trading bot graph, will be here.</p>
+//       </div>
+//     </section>
+//   );
+// };
 
 // const ContactPage = () => {
 //   return (
@@ -186,18 +135,17 @@ const TimelineItem: React.FC<{ event: TimelineEvent; isLast: boolean }> = ({ eve
 
 // --- NEW EXPERIENCE PAGE COMPONENT ---
 const ExperiencePage = () => {
-  // Create a reversed copy of the events for rendering, so the original array is not mutated.
   const reversedEvents = [...timelineEvents].reverse();
 
   return (
-    <section id="experience" className="my-20 text-neutral-200">
-      <header className="text-center mb-16">
+    <section id="experience" className="pb-20 text-neutral-200">
+      <header className="text-center mb-16 mt-16">
         <h2 className="text-4xl font-bold text-center mb-4">Experience</h2>
         <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-400">
           A timeline of my professional journey.
         </p>
       </header>
-      <main className="relative max-w-3xl mx-auto">
+      <main className="px-8 mx-auto max-w-3xl">
         {/* Map over the reversed array to show newest first. */}
         {reversedEvents.map((event, index) => (
           <TimelineItem key={index} event={event} isLast={index === reversedEvents.length - 1} />
@@ -207,10 +155,43 @@ const ExperiencePage = () => {
   );
 };
 
+const About = () => {
+  return (
+    <>
+    {/* --- About Me Section --- */}
+      <section id="about" className="bg-neutral-900 text-white py-16">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            About Me
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-12">
+
+            {/* About Text */}
+            <div className="text-lg text-neutral-300 space-y-4 text-center md:text-left">
+              <p>
+                I'm a passionate software engineer with a strong focus on building intelligent systems 
+                at the intersection of artificial intelligence and financial technology. My journey into tech 
+                is built on a unique foundation of resilience and teamwork, skills I first honed while working 
+                as a commercial fisherman in the challenging conditions of Alaska.
+              </p>
+              <p>
+                Today, I apply that same dedication to solving complex problems with code. Whether it's 
+                developing robust AI/ML pipelines or engineering solutions for trading systems, I thrive on 
+                creating software that is both efficient and impactful.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      </>
+  );
+};
+
 
 // --- Header Component ---
 // The header now takes a `setPage` function to change the currently viewed page.
-const Header = ({ isScrolled, setPage }) => {
+const Header = ({ setPage }) => {
   // This function prevents the default link behavior and calls setPage instead.
   const handleNavClick = (e, page) => {
     e.preventDefault();
@@ -218,7 +199,7 @@ const Header = ({ isScrolled, setPage }) => {
   };
 
   return (
-    <header className={"fixed top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800 text-neutral-200 shadow-lg transition-all duration-300"}>
+    <header className={"sticky top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800 text-neutral-200 shadow-lg transition-all duration-300"}>
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-bold">
           {/* Clicking the name now navigates to the 'home' page */}
@@ -241,12 +222,12 @@ const Header = ({ isScrolled, setPage }) => {
             </li>
             <li>
               <a href="/projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-neutral-400 transition-colors duration-300">
-                Projects
+                Projects (Coming Soon)
               </a>
             </li>
             <li>
               <a href="/music" onClick={(e) => handleNavClick(e, 'music')} className="hover:text-neutral-400 transition-colors duration-300">
-                Music
+                Music (Coming Soon)
               </a>
             </li>
             {/* <li>
@@ -267,37 +248,12 @@ const Header = ({ isScrolled, setPage }) => {
 function App() {
   // 'page' state determines which component to render. It defaults to 'home'.
   const [page, setPage] = useState('home');
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // The scroll effect for the header is only active on the home page.
-      if (page === 'home') {
-        setIsScrolled(window.scrollY > 10);
-      } else {
-        // On other pages, the header is always in its "scrolled" state.
-        setIsScrolled(true);
-      }
-    };
-    
-    // We call handleScroll once initially to set the correct header state on page load.
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [page]); // This effect re-runs whenever the 'page' state changes.
-
 
   // This function will render the correct page component based on the current state.
   const renderPage = () => {
     switch (page) {
       case 'experience':
         return <ExperiencePage />;
-      case 'projects':
-        return <ProjectsPage />;
-      // The 'home' case is handled separately below to allow for the hero layout.
       default:
         return null;
     }
@@ -305,23 +261,43 @@ function App() {
 
   return (
     <div className="min-h-screen bg-neutral-900 font-sans flex flex-col">
-      <Header isScrolled={isScrolled || page !== 'home'} setPage={setPage} />
-      
-      {/* The main content now grows to fill available space */}
-      <div className="flex-grow">
-        {/* We only show the full-screen Hero on the home page */}
-        {page === 'home' && <HomePage />}
+      {page === 'home' && (
+        <div>
+          <div className="min-h-screen flex-grow flex flex-col">
+            <Header setPage={setPage} />
+            <HomePage />
+          </div>
+          <About />
+          <Footer />
+        </div>
+      )}
 
-        {/* The main content area now ONLY renders if we are NOT on the home page */}
-        {page !== 'home' && (
-          <main className="container mx-auto p-4 md:p-8">
+      {page !== 'home' && (
+        <div className="flex flex-col flex-grow min-h-screen">
+          <Header setPage={setPage} />
+          <div className="flex-grow">
             {renderPage()}
-          </main>
-        )}
-      </div>
-      
-      <Footer /> {/* 👈 2. Add the Footer component here */}
+          </div>
+          <Footer />
+        </div>
+      )}
     </div>
+
+    // <div className="min-h-screen bg-neutral-900 font-sans flex flex-col">
+    //   <Header setPage={setPage} />
+      
+    //   <div className="flex-grow">
+        
+    //     {page === 'home' && <HomePage />}
+    //     {page !== 'home' && (
+    //       <main className="mx-auto">
+    //         {renderPage()}
+    //       </main>
+    //     )}
+    //   </div>
+      
+    //   <Footer />
+    // </div>
   );
 }
 

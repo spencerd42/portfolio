@@ -10,11 +10,11 @@ const Footer = () => {
   const linkedInUrl = "https://www.linkedin.com/in/spencer-dwyer-a73b04294"; 
 
   return (
-    <footer className="border-t border-zinc-800 mt-0">
+    <footer className="border-t border-neutral-800 mt-0">
       <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         
         <div className="text-center sm:text-left">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-neutral-400">
             &copy; {currentYear} Spencer Dwyer. All Rights Reserved.
           </p>
         </div>
@@ -25,7 +25,7 @@ const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="LinkedIn Profile"
-            className="text-zinc-400 hover:text-white transition-colors duration-300"
+            className="text-neutral-400 hover:text-white transition-colors duration-300"
           >
             {/* ✅ Use the imported icon component */}
             <SiLinkedin size={24} /> 
@@ -33,7 +33,7 @@ const Footer = () => {
           <a 
             href={`mailto:${userEmail}`} 
             aria-label="Email"
-            className="text-zinc-400 hover:text-white transition-colors duration-300"
+            className="text-neutral-400 hover:text-white transition-colors duration-300"
           >
             <Mail size={24} />
           </a>
