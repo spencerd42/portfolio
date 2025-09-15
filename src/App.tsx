@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Footer from './components/Footer';
 
 import { ChevronDown } from 'lucide-react';
@@ -167,17 +167,20 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
 
             {/* About Text */}
-            <div className="text-lg text-neutral-300 space-y-4 text-center md:text-left">
+            <div className="text-lg text-neutral-300 space-y-4 text-left">
               <p>
-                I'm a passionate software engineer with a strong focus on building intelligent systems 
-                at the intersection of artificial intelligence and financial technology. My journey into tech 
-                is built on a unique foundation of resilience and teamwork, skills I first honed while working 
-                as a commercial fisherman in the challenging conditions of Alaska.
+                I am a dedicated and analytical student at The University of Texas at Austin,
+                pursuing a double-major in Computer Science and Music. My experience is primarily
+                in artificial intelligence and machine learning, including large-language models and
+                predictive analysis, and I am fascinated by the applications of technology within
+                financial markets and trading.
               </p>
               <p>
-                Today, I apply that same dedication to solving complex problems with code. Whether it's 
-                developing robust AI/ML pipelines or engineering solutions for trading systems, I thrive on 
-                creating software that is both efficient and impactful.
+                I study oboe with Dr. Andrew Parker, participating in masterclasses, large ensembles,
+                and solo performances. I strive to become the best version of myself by growing
+                both my analytical and artistic skills. While music can offer my brain a break
+                from computer science, the two fields often overlap in prioritizing accuracy and
+                efficiency.
               </p>
             </div>
 
@@ -282,22 +285,6 @@ function App() {
         </div>
       )}
     </div>
-
-    // <div className="min-h-screen bg-neutral-900 font-sans flex flex-col">
-    //   <Header setPage={setPage} />
-      
-    //   <div className="flex-grow">
-        
-    //     {page === 'home' && <HomePage />}
-    //     {page !== 'home' && (
-    //       <main className="mx-auto">
-    //         {renderPage()}
-    //       </main>
-    //     )}
-    //   </div>
-      
-    //   <Footer />
-    // </div>
   );
 }
 
