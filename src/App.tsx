@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HomePage from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ExperiencePage from './components/Experience';
 import About from './components/About';
+import ProjectsPage from './components/Projects';
 
 // --- Main App Component ---
 // This component now acts as a router, deciding which page to display.
@@ -11,11 +12,17 @@ function App() {
   // 'page' state determines which component to render. It defaults to 'home'.
   const [page, setPage] = useState('home');
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
   // This function will render the correct page component based on the current state.
   const renderPage = () => {
     switch (page) {
       case 'experience':
         return <ExperiencePage />;
+      case 'projects':
+        return <ProjectsPage />;
       default:
         return null;
     }
