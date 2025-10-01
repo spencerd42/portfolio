@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ExperiencePage from './components/Experience';
 import About from './components/About';
 import ProjectsPage from './components/Projects';
+import MusicPage from './components/Music';
 
 // --- Main App Component ---
 // This component now acts as a router, deciding which page to display.
@@ -23,6 +24,8 @@ function App() {
         return <ExperiencePage />;
       case 'projects':
         return <ProjectsPage />;
+      case 'music':
+        return <MusicPage />;
       default:
         return null;
     }

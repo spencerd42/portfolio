@@ -1,6 +1,6 @@
 const ProjectsPage = () => {
   return (
-    <section id="experience" className="pb-20 text-neutral-200">
+    <section id="projects" className="pb-20 text-neutral-200">
       <header className="text-center mb-16 mt-16">
         <h2 className="text-4xl font-bold text-center mb-4">My Projects</h2>
       </header>

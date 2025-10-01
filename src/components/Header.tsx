@@ -31,12 +31,12 @@ const Header = ({ setPage }) => {
             </li>
             <li>
               <a href="/projects" onClick={(e) => handleNavClick(e, 'projects')} className="hover:text-neutral-400 transition-colors duration-300">
-                Projects (Coming Soon)
+                Projects
               </a>
             </li>
             <li>
               <a href="/music" onClick={(e) => handleNavClick(e, 'music')} className="hover:text-neutral-400 transition-colors duration-300">
-                Music (Coming Soon)
+                Music
               </a>
             </li>
             {/* <li>
