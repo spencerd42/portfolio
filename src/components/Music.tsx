@@ -13,6 +13,9 @@ const MusicPage = () => {
         <p>Selections from my most recent performances.</p>
       </header>
       <main className="px-8 mx-auto max-w-4xl space-y-12">
+        <h2 className="text-2xl font-bold text-center mb-4">Robert Schumann: Three Romances, Op. 94: No. 1, Nicht schnell</h2>
+        <WistiaPlayer mediaId={"4mp3ik0umg"} />
+        <p>November 18, 2025 - Spencer Dwyer, Oboe; Steve Carlton, Piano</p>
         <h2 className="text-2xl font-bold text-center mb-4">Pictures at an Exhibition - The Great Gate of Kiev</h2>
         <WistiaPlayer mediaId={"3h3uduurus"} />
         <p>February 10, 2025 - The University of Texas at Austin Wind Symphony</p>
