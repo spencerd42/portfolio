@@ -2,9 +2,6 @@
 
 import WistiaPlayer from '../components/WistiaPlayer'; // Adjust the import path as needed
 
-// A list of all your Wistia video IDs
-const myProjectIds = ['3djkwkb83f', 'j38ihs9jkc', 'g1p2u3q4r5']; // Example IDs
-
 const MusicPage = () => {
   return (
     <section id="music" className="pb-20 text-neutral-200">
@@ -13,6 +10,9 @@ const MusicPage = () => {
         <p>Selections from my most recent performances.</p>
       </header>
       <main className="px-8 mx-auto max-w-4xl space-y-12">
+        <h2 className="text-2xl font-bold text-center mb-4">Omar Thomas: The Low-Down Brown Get-Down</h2>
+        <WistiaPlayer mediaId={"rr9ufkddqu"} />
+        <p>February 9, 2026 - The University of Texas at Austin Wind Symphony</p>
         <h2 className="text-2xl font-bold text-center mb-4">Robert Schumann: Three Romances, Op. 94: No. 1, Nicht schnell</h2>
         <WistiaPlayer mediaId={"4mp3ik0umg"} />
         <p>November 18, 2025 - Spencer Dwyer, Oboe; Steve Carlton, Piano</p>
